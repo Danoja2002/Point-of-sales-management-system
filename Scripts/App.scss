@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;        
+    box-sizing: border-box;
+}
+
+.app {
+    background-color: #000;
+    height: 100vh;
+    overflow: hidden;
+    
+    .pos {
+        height: 100vh;
+        display: flex;                
+    }        
+}
+
+@media print {
+    .menu, .navbar {
+        display: none;
+    }
+
+    .ticket {        
+        width: 400px;
+        
+        .ticket__information {
+            box-shadow: none;
+            border: none;
+            height: auto;          
+            .ticket__table {
+                overflow: visible;
+
+                .items__description {
+                    columns: 2!important;      
+                    display: flex; 
+                }
+            }
+        }        
+
+        .remove-icon {
+            display: none;
+        }        
+
+        .ticket__actions {
+            display: none;
+        }
+    }
+
+     @page {
+         margin: 0;
+     }
+}
